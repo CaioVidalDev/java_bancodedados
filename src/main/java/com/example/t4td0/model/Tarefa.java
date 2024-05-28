@@ -1,3 +1,4 @@
+// Classe Tarefa representa uma entidade no banco de dados
 package com.example.t4td0.model;
 
 import jakarta.persistence.*;
@@ -14,10 +15,12 @@ public class Tarefa {
     @Column(name = "codigo_criacao")
     private String codigoCriacao;
 
+    // Construtor padrão que gera um código de criação
     public Tarefa() {
         this.codigoCriacao = gerarCodigoCriacao();
     }
 
+    // Construtor que inicializa a tarefa com um título
     public Tarefa(String titulo) {
         this.titulo = titulo;
         this.codigoCriacao = gerarCodigoCriacao();
@@ -48,8 +51,8 @@ public class Tarefa {
         this.codigoCriacao = codigoCriacao;
     }
 
+    // Método para gerar um código de criação
     private String gerarCodigoCriacao() {
-        // Aqui você pode implementar a lógica para gerar o código de criação, se necessário
-        return "COD-" + System.currentTimeMillis(); // Exemplo simples usando o timestamp atual
+        return "COD-" + System.currentTimeMillis();
     }
 }

@@ -1,3 +1,4 @@
+// Repositório Spring para a entidade TarefaExcluida
 package com.example.t4td0.repository;
 
 import com.example.t4td0.model.TarefaExcluida;

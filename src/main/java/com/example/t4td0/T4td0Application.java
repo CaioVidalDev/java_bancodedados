@@ -1,5 +1,6 @@
-package com.example.t4td0;
 
+// Classe principal que inicia a aplicação Spring Boot
+package com.example.t4td0;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

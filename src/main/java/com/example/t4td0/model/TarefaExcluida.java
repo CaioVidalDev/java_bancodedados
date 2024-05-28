@@ -1,7 +1,7 @@
+// Classe TarefaExcluida representa uma entidade no banco de dados
 package com.example.t4td0.model;
 
 import jakarta.persistence.*;
-
 
 @Entity
 public class TarefaExcluida {
@@ -15,10 +15,12 @@ public class TarefaExcluida {
     @Column(name = "codigo_exclusao")
     private String codigoExclusao;
 
+    // Construtor padrão que gera um código de exclusão
     public TarefaExcluida() {
         this.codigoExclusao = gerarCodigoExclusao();
     }
 
+    // Construtor que inicializa a tarefa excluída com um título
     public TarefaExcluida(String titulo) {
         this.titulo = titulo;
         this.codigoExclusao = gerarCodigoExclusao();
@@ -49,9 +51,8 @@ public class TarefaExcluida {
         this.codigoExclusao = codigoExclusao;
     }
 
+    // Método para gerar um código de exclusão
     private String gerarCodigoExclusao() {
-        // Aqui você pode implementar a lógica para gerar o código de exclusão, se necessário
-        return "EXC-" + System.currentTimeMillis(); // Exemplo simples usando o timestamp atual
+        return "EXC-" + System.currentTimeMillis();
     }
 }
-
